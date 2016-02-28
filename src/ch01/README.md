@@ -4,27 +4,49 @@ Ch01 자바를 시작하기 전에
 
 ### 자바는 무엇인가?
 ```
-  - 썬 마이크로시스템즈에서 1996년 1월에 공식적으로 발표한 *객체지향 프로그램 언어*이다.
-  - 기존 C++의 장점을 채택하고 비교적 배우기 쉽고 이해하기 쉬운 간결한 표현이 가능하도록 함.
-  - 서블릿(Servlet), JSP(Java Server Pages), 모바일 환경, 대규모 기업 환경(J2EE), XML 등 다양한 기술을 지원
+1. 썬 마이크로시스템즈에서 1996년 1월에 공식적으로 발표한 *객체지향 프로그램 언어*이다.
+2. 기존 C++의 장점을 채택하고 비교적 배우기 쉽고 이해하기 쉬운 간결한 표현이 가능하도록 함.
+3. 서블릿(Servlet), JSP(Java Server Pages), 모바일 환경, 대규모 기업 환경(J2EE), XML 등 다양한 기술을 지원
 ```
 
 ### 자바언어의 특징
 ```
-- 운영체제에 독립적
+1.운영체제에 독립적
   운영체제에 종속적이지 않은 실행 환경(JVM)의 존재로 인하여 운영체제나 하드웨어 환경에 종속적이지 않음
-  **Write Once, run anywhere**
-- 객체지향 언어
+  Write Once, run anywhere
+2.객체지향 언어
   : 상속, 캡슐화, 다형성이 잘 적용된 언어로 평가 받고 있음.
-- Garbage Collection
-- Network, 분산처리
-- Multi Thread 지원
-- 동적 클래스 로딩(Dynamic Class Loader)
+3.Garbage Collection
+  : 가비지컬렉터가 자동적으로 메모리를 관리해주기 때문에 따로 메모리 관리를 하지 않아도 됨
+4.Network, 분산처리
+  : 각종 네트워크 프로그래밍 라이브러리 지원
+5.Multi Thread 지원
+  : 운영체제와 독립적으로 멀티쓰레드 프로그래밍 구현이 가능 함.
+6.동적 클래스 로딩(Dynamic Class Loader)
+  : 모든 클래스를 로딩하지 않고 필요한 시점에 클래스를 로딩하여 사용 가능
 ```
+### JVM(Java Virtual Machine)
+- 자바 실행을 위한 가상의 머신(소프트웨어로 구현된 컴퓨터 / 컴퓨터 속 컴퓨터)
+- 일반 프로그램 코드는 OS만 거치고 하드웨어로 전달되는 반면에,
+Java Application은 JVM을 한 번 더 거치기 때문에, 실행 시 해석이 되는 환경에 따라 속도가 느리다는 단점을 가지고 있다.
+  * 바이트코드(컴파일된 자바코드)
+- Java Application은 JVM과 상호작용하기 때문에 OS와 독립적이지만, JVM은 직접적으로 OS와 상호작용을 하기 때문에 OS에 종속적이다
+  * Java Code -> JVM -> OS
+
 ### 자바개발환경 구축
 - JDK 설치(1.8 이상)
-
   : 윈도우 / 유닉스 환경에 따른 개발 환경 설정이 다름.
 
+  교재 참고 및 기타 블로그 참고
 
 ### 기본 프로그램 작성
+<pre>
+<code>
+// HelloWorld 출력 기본 프로그램 작성
+public class HelloWorld {
+    public static void main(String args[]){
+        System.out.println("HelloWorld");
+    }
+}
+</code>
+</pre>
