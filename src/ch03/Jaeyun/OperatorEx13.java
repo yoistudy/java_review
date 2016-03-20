@@ -1,0 +1,21 @@
+package ch03.Jaeyun;
+
+public class OperatorEx13 {
+
+	public static void main(String[] args) {
+		char c1 = 'a';
+		char c2 = c1;
+		char c3 = ' ';
+		int i = c1 + 1;
+		
+		c3 = (char)(c1 + 1); // c1 + 1의 결과가 int이므로 char형변환이 필요
+		c2++;
+		c2++;
+		
+		System.out.println("i = " + i);
+		System.out.println("c2 = " + c2);
+		System.out.println("c3 = " + c3);
+
+	}
+
+}
