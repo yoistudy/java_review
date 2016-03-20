@@ -6,6 +6,6 @@ public class FlowEx13 {
 			for(int i=1; i<=10; i++){
 				sum +=i;
 			}
-			System.out.println(i-1 +" 까지의 합: "+sum);
+			System.out.println(sum-1 +" 까지의 합: "+sum);
 		}
 }
