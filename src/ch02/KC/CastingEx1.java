@@ -1,4 +1,4 @@
-package ch02;
+package ch02.KC;
 
 /**
  * Created by Daniel on 2016. 3. 6..
