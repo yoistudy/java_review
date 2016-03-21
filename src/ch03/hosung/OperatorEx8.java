@@ -1,10 +1,10 @@
-package com.study.ch03;
+package ch03.hosung;
 
 public class OperatorEx8 {
 	public static void main(String[] args) {
 		byte a = 10;
 		byte b = 20;
-		byte c = (byte) (a + b); //byte c = a + b // -> ¿¡·¯¹ß»ý Çüº¯È­ ÇÊ¿ä  
+		byte c = (byte) (a + b); //byte c = a + b // -> ï¿½ï¿½ï¿½ï¿½ï¿½ß»ï¿½ ï¿½ï¿½È­ ï¿½Ê¿ï¿½  
 		System.out.println(c);
 	}
 }

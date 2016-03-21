@@ -1,11 +1,11 @@
-package com.study.ch03;
+package ch03.hosung;
 
 public class OperatorEx26 {
 	public static void main(String[] args) {
 		int x = 3;
 		int y = 5;
 		
-		System.out.println("x´Â "+x+"ÀÌ°í, y´Â "+y+"ÀÌÀÏ¶§, ");
+		System.out.println("xï¿½ï¿½ "+x+"ï¿½Ì°ï¿½, yï¿½ï¿½ "+y+"ï¿½ï¿½ï¿½Ï¶ï¿½, ");
 		System.out.println("x | y = "+ (x|y));
 		System.out.println("x & y = "+ (x&y));
 		System.out.println("x ^ y = "+ (x^y));

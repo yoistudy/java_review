@@ -1,4 +1,4 @@
-package com.study.ch04;
+package ch04.hosung;
 
 public class FlowEx11 {
 	public static void main(String[] args) {

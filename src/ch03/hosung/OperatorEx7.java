@@ -1,12 +1,12 @@
-package com.study.ch03;
+package ch03.hosung;
 
 public class OperatorEx7 {
 	public static void main(String[] args) {
 		boolean power =false;
 		System.out.println(power);
-		power = !power;				//power °ªÀÌ false -> true
+		power = !power;				//power ï¿½ï¿½ï¿½ï¿½ false -> true
 		System.out.println(power);
-		power = !power;				//power °ªÀÌ true -> flase	
+		power = !power;				//power ï¿½ï¿½ï¿½ï¿½ true -> flase	
 		System.out.println(power);
 	}
 }

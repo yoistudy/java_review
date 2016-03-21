@@ -1,13 +1,13 @@
-package com.study.ch03;
+package ch03.hosung;
 
 public class OperatorEx25 {
 	public static void main(String[] args) {
 		char x = 'j';
 		
 		if((x>='a'&&x<='z')||(x>='A'&&x<='Z')){
-			System.out.println("À¯È¿ÇÑ ¹®ÀÚÀÔ´Ï´Ù.");
+			System.out.println("ï¿½ï¿½È¿ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.");
 		}else{
-			System.out.println("À¯È¿ÇÏÁö ¾ÊÀº ¹®ÀÚÀÔ´Ï´Ù.");
+			System.out.println("ï¿½ï¿½È¿ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.");
 		}
 	}
 }

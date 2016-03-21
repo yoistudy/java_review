@@ -1,4 +1,4 @@
-package com.study.ch01;
+package ch01.hosung;
 
 public class Hello {
 	public static void main(String[] args){

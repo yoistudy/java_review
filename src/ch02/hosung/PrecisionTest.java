@@ -1,4 +1,4 @@
-package com.study.ch02;
+package ch02.hosung;
 
 public class PrecisionTest {
 	public static void main(String[] args) {
@@ -6,7 +6,7 @@ public class PrecisionTest {
 		double d=1.2345678901234567890;
 		
 		float f2 =0.100000001f; //0.1
-		double d2=0.100000001; //Á¢¹Ì»ç »ý·« °¡´É
+		double d2=0.100000001; //ï¿½ï¿½ï¿½Ì»ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 		double d3=0.1000000000000001;
 		
 		System.out.println(f);

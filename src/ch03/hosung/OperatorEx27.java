@@ -1,4 +1,4 @@
-package com.study.ch03;
+package ch03.hosung;
 
 public class OperatorEx27 {
 	public static void main(String[] args) {
@@ -8,7 +8,7 @@ public class OperatorEx27 {
 		int absX = (x >= 0) ? x:-x;
 		int absY = (y >= 0) ? y:-y;
 		
-		System.out.println("x= 10ÀÏ ¶§, xÀÇ Àý´ë°ªÀº  "+absX);
-		System.out.println("y= -10ÀÏ ¶§, xÀÇ Àý´ë°ªÀº  "+absY);
+		System.out.println("x= 10ï¿½ï¿½ ï¿½ï¿½, xï¿½ï¿½ ï¿½ï¿½ë°ªï¿½ï¿½  "+absX);
+		System.out.println("y= -10ï¿½ï¿½ ï¿½ï¿½, xï¿½ï¿½ ï¿½ï¿½ë°ªï¿½ï¿½  "+absY);
 	}
 }

@@ -1,4 +1,4 @@
-package com.study.ch02;
+package ch02.hosung;
 
 public class CodeToChar {
 	public static void main(String[] args) {

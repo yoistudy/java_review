@@ -1,11 +1,11 @@
-package com.study.ch03;
+package ch03.hosung;
 
 public class OperatorEx19 {
 	public static void main(String[] args) {
 		
 		int share = 10 / 8;
 		int remain = 10 % 8;
-		System.out.println("10À» 8·Î ³ª´©¸é, ");
-		System.out.println("¸òÀº "+share+"ÀÌ°í, ³ª¸ÓÁö´Â "+remain);
+		System.out.println("10ï¿½ï¿½ 8ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ");
+		System.out.println("ï¿½ï¿½ï¿½ï¿½ "+share+"ï¿½Ì°ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ "+remain);
 	}
 }

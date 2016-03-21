@@ -1,11 +1,11 @@
-package com.study.ch03;
+package ch03.hosung;
 
 public class OperatorEx22 {
 	public static void main(String[] args) {
-		int temp; //°è»ê °á°ú¸¦ ´ã±â À§ÇÑ º¯¼ö
+		int temp; //ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 		
 		System.out.println(-8);
-		System.out.println(Integer.toBinaryString(-8));//-8À» 2Áø¼ö·Î Ç¦ÇÑ ¹®ÀÚ¿­ ¹ÝÈ¯
+		System.out.println(Integer.toBinaryString(-8));//-8ï¿½ï¿½ 2ï¿½ï¿½ï¿½ï¿½ï¿½ Ç¦ï¿½ï¿½ ï¿½ï¿½ï¿½Ú¿ï¿½ ï¿½ï¿½È¯
 		System.out.println();
 		
 		temp = -8<<1;
@@ -19,7 +19,7 @@ public class OperatorEx22 {
 		System.out.println();
 		
 		System.out.println(-8);
-		System.out.println(Integer.toBinaryString(-8));//-8À» 2Áø¼ö·Î Ç¦ÇÑ ¹®ÀÚ¿­ ¹ÝÈ¯
+		System.out.println(Integer.toBinaryString(-8));//-8ï¿½ï¿½ 2ï¿½ï¿½ï¿½ï¿½ï¿½ Ç¦ï¿½ï¿½ ï¿½ï¿½ï¿½Ú¿ï¿½ ï¿½ï¿½È¯
 		System.out.println();
 		
 		temp = -8>>1;
@@ -33,7 +33,7 @@ public class OperatorEx22 {
 		System.out.println();
 		
 		System.out.println(-8);
-		System.out.println(Integer.toBinaryString(-8));//-8À» 2Áø¼ö·Î Ç¦ÇÑ ¹®ÀÚ¿­ ¹ÝÈ¯
+		System.out.println(Integer.toBinaryString(-8));//-8ï¿½ï¿½ 2ï¿½ï¿½ï¿½ï¿½ï¿½ Ç¦ï¿½ï¿½ ï¿½ï¿½ï¿½Ú¿ï¿½ ï¿½ï¿½È¯
 		System.out.println();
 		
 		temp = -8>>>1;

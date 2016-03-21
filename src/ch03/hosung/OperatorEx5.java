@@ -1,4 +1,4 @@
-package com.study.ch03;
+package ch03.hosung;
 
 public class OperatorEx5 {
 	public static void main(String[] args) {

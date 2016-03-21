@@ -1,15 +1,15 @@
-package com.study.ch03;
+package ch03.hosung;
 
 public class OperatorEx2 {
 	public static void main(String[] args) {
 		int i=5;
 		int j=0;
 		j=i++;
-		System.out.println("j=i++; ½ÇÇà ÈÄ i="+i+", j="+j);
+		System.out.println("j=i++; ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ i="+i+", j="+j);
 		
 		i=5;
 		j=0;
 		j=++i;
-		System.out.println("j=++i; ½ÇÇà ÈÄ i="+i+", j="+j);
+		System.out.println("j=++i; ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ i="+i+", j="+j);
 	}
 }

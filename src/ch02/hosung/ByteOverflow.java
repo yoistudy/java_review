@@ -1,11 +1,11 @@
-package com.study.ch02;
+package ch02.hosung;
 
 public class ByteOverflow {
 	public static void main(String[] args) {
-		byte b = 0; //byteÇü º¯¼ö b¸¦ ¼±¾ðÇÏ°í 0À¸·Î ÃÊ±âÈ­
+		byte b = 0; //byteï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ bï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ 0ï¿½ï¿½ï¿½ï¿½ ï¿½Ê±ï¿½È­
 		int i = 0;
 		
-		//¹Ýº¹¹® ÀÌ¿ë bÀÇ °ªÀ» 1¾¿, 0ºÎÅÍ 270±îÁö Áõ°¡
+		//ï¿½Ýºï¿½ï¿½ï¿½ ï¿½Ì¿ï¿½ bï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ 1ï¿½ï¿½, 0ï¿½ï¿½ï¿½ï¿½ 270ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 		for(int x=0; x<=270; x++){
 			System.out.print(b++);
 			System.out.print('\t');

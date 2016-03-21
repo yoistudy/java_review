@@ -1,24 +1,24 @@
-package com.study.ch03;
+package ch03.hosung;
 
 public class OperatorEx15 {
 	public static void main(String[] args) {
 		char c = 'a';
 		for(int i=0; i<26; i++){
-			System.out.print(c++);//'a'ºÎÅÍ 26°³ ¹®ÀÚ Ãâ·Â
+			System.out.print(c++);//'a'ï¿½ï¿½ï¿½ï¿½ 26ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
 		}
 		
-		System.out.println();//ÁÙ¹Ù²Þ
+		System.out.println();//ï¿½Ù¹Ù²ï¿½
 		
 		c = 'A';
 		for(int i=0; i<26; i++){
-			System.out.print(c++);//'A'ºÎÅÍ 26°³ ¹®ÀÚ Ãâ·Â
+			System.out.print(c++);//'A'ï¿½ï¿½ï¿½ï¿½ 26ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
 		}
 		
-		System.out.println();//ÁÙ¹Ù²Þ
+		System.out.println();//ï¿½Ù¹Ù²ï¿½
 		
 		c='0';
 		for(int i=0; i<10; i++){
-			System.out.print(c++);//'0'ºÎÅÍ 10°³ ¹®ÀÚ Ãâ·Â
+			System.out.print(c++);//'0'ï¿½ï¿½ï¿½ï¿½ 10ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
 		}
 		System.out.println();
 	}

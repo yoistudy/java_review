@@ -1,8 +1,8 @@
-package com.study.ch03;
+package ch03.hosung;
 
 public class OperatorEx11 {
 	public static void main(String[] args) {
-		long a=1000000 * 1000000; //int * int ÇüÀÌ±â¶§¹®
+		long a=1000000 * 1000000; //int * int ï¿½ï¿½ï¿½Ì±â¶§ï¿½ï¿½
 		long b=1000000 * 1000000L;
 		System.out.println(a);
 		System.out.println(b);

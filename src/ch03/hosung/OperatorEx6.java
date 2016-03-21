@@ -1,9 +1,9 @@
-package com.study.ch03;
+package ch03.hosung;
 
 public class OperatorEx6 {
 	public static void main(String[] args) {
 		byte b =10;
-		//byte result=~b; // ~ÀÇ ¿¬»ê°á°ú°¡ in¶ó¼­ byteÇü º¯¼ö¿¡ ÀúÀå ºÒ°¡
+		//byte result=~b; // ~ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ inï¿½ï¿½ byteï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ò°ï¿½
 		byte result=(byte)~b;
 		
 		System.out.println("b = "+b);

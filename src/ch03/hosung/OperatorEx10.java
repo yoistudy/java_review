@@ -1,10 +1,10 @@
-package com.study.ch03;
+package ch03.hosung;
 
 public class OperatorEx10 {
 	public static void main(String[] args) {
 		int a=1000000;
 		int b=2000000;
-		long c=a*b; //int * int ÇüÀÌ±â¶§¹®¿¡ a ³ª  b µÑÁß ÇÏ³ª¸¦ longÇüÀ¸·Î ¹Ù²ã¾ßÇÔ
+		long c=a*b; //int * int ï¿½ï¿½ï¿½Ì±â¶§ï¿½ï¿½ï¿½ï¿½ a ï¿½ï¿½  b ï¿½ï¿½ï¿½ï¿½ ï¿½Ï³ï¿½ï¿½ï¿½ longï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ù²ï¿½ï¿½ï¿½ï¿½
 		System.out.println(c);
 	}
 }

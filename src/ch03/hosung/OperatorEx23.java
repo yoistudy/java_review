@@ -1,22 +1,22 @@
-package com.study.ch03;
+package ch03.hosung;
 
 public class OperatorEx23 {
 	public static void main(String[] args) {
 		if(10 == 10.0f){
-			System.out.println("10°ú 10.0f´Â °°´Ù");
+			System.out.println("10ï¿½ï¿½ 10.0fï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
 		}
 		
 		if('0' != 0){
-			System.out.println("'0'°ú 0Àº °°Áö ¾Ê´Ù.");
+			System.out.println("'0'ï¿½ï¿½ 0ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ê´ï¿½.");
 		}
 		
 		if('A' == 65){
-			System.out.println("'A'´Â  65¿Í °°´Ù.");
+			System.out.println("'A'ï¿½ï¿½  65ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.");
 		}
 		
 		int num=5;
 		if(num > 0 && num < 9){
-			System.out.println("5´Â 0º¸´Ù Å©°í , 9º¸´Ù´Â ÀÛ´Ù.");
+			System.out.println("5ï¿½ï¿½ 0ï¿½ï¿½ï¿½ï¿½ Å©ï¿½ï¿½ , 9ï¿½ï¿½ï¿½Ù´ï¿½ ï¿½Û´ï¿½.");
 		}
 	
 	}

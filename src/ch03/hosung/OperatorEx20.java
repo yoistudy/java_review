@@ -1,9 +1,9 @@
-package com.study.ch03;
+package ch03.hosung;
 
 public class OperatorEx20 {
 	public static void main(String[] args) {
 		for(int i=1; i<=10; i++){
-			if(i%3==0){		//i°¡ 3À¸·Î ³ª´©¾î ¶³¾îÁö¸é, 3ÀÇ ¹è¼öÀÌ¹Ç·Î Ãâ·Â
+			if(i%3==0){		//iï¿½ï¿½ 3ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, 3ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ì¹Ç·ï¿½ ï¿½ï¿½ï¿½
 				System.out.println(i);
 			}
 		}

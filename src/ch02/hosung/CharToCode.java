@@ -1,4 +1,4 @@
-package com.study.ch02;
+package ch02.hosung;
 
 public class CharToCode {
 	public static void main(String[] args) {
