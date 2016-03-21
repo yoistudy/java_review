@@ -20,3 +20,7 @@ hs_err_pid*
 # eclipse
 .classpath
 .project
+
+#hosung
+.settings/
+bin/
