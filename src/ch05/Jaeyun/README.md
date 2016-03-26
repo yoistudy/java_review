@@ -13,14 +13,14 @@ int[] score;
 String[] name;
 
 //타입 변수이름[];
-int price[]
+int price[];
 String menu[];
 ```
 
 ##### 배열의 생성
 
 ```java
-int[] score; // 배열 변수의 선언되었다
+int[] score; // 배열 변수의 선언
 // 배열을 생성한다, 5개의 int값을 저장할 수 있는 고정된 크기를 가진다
 score = new int[5];
 ```
@@ -95,7 +95,7 @@ String[] studentGrade[];
 int[][] studentScore = new int[5][3]; // 5 X 3의 2차원 배열 생성
 
 //3 X 2의 리터럴 2차원 배열
-String studentClass[][] = new String[][] {
+String[][] studentClass = new String[][] {
   {"ENGLISH", "MATH"},
   {"ENGLISH", "KOREAN"},
   {"KOREAN", "MATH"}
@@ -104,7 +104,7 @@ String studentClass[][] = new String[][] {
 
 ##### 가변배열
 
-- 2차원 이상의 배열을 생성할 때 배열 차수 중 마지막 추수의 크기를 미정하면 유동적인 크기를 갖는 가변배열을 구성할 수 있다
+- 2차원 이상의 배열을 생성할 때 배열 차수 중 마지막 차수의 크기를 미정하면 유동적인 크기를 갖는 가변배열을 구성할 수 있다
 
 2차원 가변 배열 생성
 ```java
@@ -118,7 +118,7 @@ score[3] = new int[4];
 score[4] = new int[3];
 
 //리터럴 2차원 가변 배열
-String studentClass[][] = new String[][] {
+String[][] studentClass = new String[][] {
   {"ENGLISH", "MATH"},
   {"ENGLISH", "KOREAN", ,"MATH", "PE"},
   {"ENGLISH", "KOREAN", "PE"},
