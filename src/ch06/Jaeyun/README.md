@@ -367,18 +367,65 @@ PrintStream클래스는10개의 오버로딩이 된 println메서드를 정의
 
 println메서드는 어떤 종류의 매개변수를 지정해도 출력할 수 있다
 
-계속...
+```java
+void println ()
+void println(boolean x)
+void println(char x)
+void println(char[] x )
+void println(double x)
+void println(float x)
+void println(int x)
+void println(long x)
+void println(Object x)
+void println(String x)
+```
 
 #### 오버로딩의 장점
+
+- 같은 기능의 메서드를 매개변수 타입별로 각각 명명하지 않고 오버라이딩을 사용한다면 메서드 명이 간결해지고 사용이 편리함
 
 ## 생성자
 
 #### 생성자란?
 
+> 인스턴스가 생성될 때 호출 되는 인스터스 초기화 메서드
+
+> 인스턴스 변수의 초기화 같은 인스턴스 생성시에 실행 되어야할 작업에 사용
+
+- 연산자가 new 인스턴스를 생성하는 것이지 생성자가 인스턴스를 생성하는 것은 아님
+
 #### 기본생성자
+
+클래스에 생성자가 하나도 정의되지 않았을 때 컴파일러가 자동적으로 생성자를 추가한다
+
+```java
+
+class Person () {
+  Person () {
+  }
+}
+```
 
 #### 매개변수가 있는 생성자
 
+- 매개변수를 선언하여 생성자 호출 시 매개변수를 이용하여 인스턴스 초기화 작업을 할 수 있다
+
+```java
+class Car {
+  String color ;
+  String gearType;
+  int door ;
+
+  Car () {} // 생성자
+  Car(String c , String g, int d) { // 샘성 자
+      color c;
+      gearType g ;
+      door d
+    }
+
+  // Car c = new Car( "white" , "auto" , 4);로 사용
+}
+```
 #### 생성자에서 다른 생성자 호출하기 - this(), this
 
 #### 생성자를 이용한 인스턴스 복사
