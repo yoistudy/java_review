@@ -8,7 +8,7 @@ public class FactorialTest {
         System.out.println(factorial(4));
         System.out.println(factorialAnother(4));
     }
-
+    // 4*3*2*1
     static long factorial(int n){
         if(n == 1){
             return 1;

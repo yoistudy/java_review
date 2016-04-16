@@ -12,12 +12,15 @@ public class CallStackTest2 {
     }
 
     static void firstMethod(){
+        String msg = "Hello world";
         System.out.println("firstMethod start");
         secondMethod();
         System.out.println("firstMethod end");
     }
 
     static void secondMethod(){
+        int a = 10;
+
         System.out.println("secondMethod start");
         System.out.println("secondMethod()");
         System.out.println("secondMethod end");

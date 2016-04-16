@@ -45,8 +45,8 @@ public class CardTest {
 
 
 class Card{
-    String kind;
+    String kind; // 인스턴스 변수
     int number;
-    static int width = 100;
+    static int width = 100; // 클래스 변수
     static int height= 250;
 }

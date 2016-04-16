@@ -1,8 +1,11 @@
 package ch06.KC;
 
+import javax.xml.ws.ServiceMode;
+
 /**
  * Created by Daniel on 2016. 4. 2..
  */
+
 public class ParameterTest2 {
 
 
@@ -14,8 +17,6 @@ public class ParameterTest2 {
         change(d);
         System.out.println("After change(d)");
         System.out.println("main() : x = " + d.x);
-
-
 
     }
 
