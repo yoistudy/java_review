@@ -1,5 +1,8 @@
 package ch07.KC;
 
+import java.lang.Integer;
+
+
 /**
  * Created by Daniel on 2016. 4. 17..
  */
