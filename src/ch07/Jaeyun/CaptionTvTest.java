@@ -1,7 +1,5 @@
 package ch07.Jaeyun;
 
-import java.sql.Date;
-import java.util.Date;
 
 class Tv {
 	boolean isPowerOn; // 전원 여부
