@@ -6,9 +6,9 @@ public class BindingTest2 {
 		Parent p = new Child();
 		Child c = new Child();
 		System.out.println("p.x = " + p.x);
-		System.out.println("p.y = " + p.y);
+		//System.out.println("p.y = " + p.y);
 		p.methodA();
-		p.methodB();
+		//p.methodB();
 		
 		System.out.println("c.x = " + c.x);
 		System.out.println("c.y = " + c.y);

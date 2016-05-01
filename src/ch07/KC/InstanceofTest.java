@@ -13,6 +13,9 @@ public class InstanceofTest {
         }
 
         if(fe instanceof CastingCar){
+            CastingCar ct = new CastingFireEngine();
+            ct = (CastingFireEngine)ct;
+            ((CastingFireEngine) ct).water();
             System.out.println("This is a Car instance");
         }
 
