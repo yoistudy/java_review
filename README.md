@@ -19,6 +19,10 @@
 |   2  | 2016. 03. 20 | [Ch.3 연산자(Operator)](https://github.com/yoistudy/java_review/tree/master/src/ch03)     |Jaeyun|O|
 |      |       -      | [Ch.4 조건문과 반복문](https://github.com/yoistudy/java_review/tree/master/src/ch04)      |Jaeyun|O|
 |   3  | 2016. 03. 27 | [Ch.5 배열(Array)](https://github.com/yoistudy/java_review/tree/master/src/ch05)          |hosung|O|
-|   4  | 2016. 04. 03 | Ch.6 객체지향 프로그래밍 I     |KC ||
+|   4  | 2016. 04. 03 | [Ch.6 객체지향 프로그래밍 I (1/2)](https://github.com/yoistudy/java_review/tree/master/src/ch06)    |KC |O|
+|   5  | 2016. 04. 10 | [Ch.6 객체지향 프로그래밍 I (1/2)](https://github.com/yoistudy/java_review/tree/master/src/ch07)    |모두 |O|
+|   6  | 2016. 04. 17 | [Ch.7 객체지향 프로그래밍 II (1/3)](https://github.com/yoistudy/java_review/tree/master/src/ch07)    |leehyunju |O|
+|   7  | 2016. 04. 24 | [Ch.7 객체지향 프로그래밍 II (2/3)](https://github.com/yoistudy/java_review/tree/master/src/ch07)    |모두|O|
+|   8  | 2016. 05. 01 | [Ch.7 객체지향 프로그래밍 II (3/3)](https://github.com/yoistudy/java_review/tree/master/src/ch07)    |leehyunju|O|
 
 
