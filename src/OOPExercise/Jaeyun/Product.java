@@ -1,15 +1,15 @@
 package OOPExercise.Jaeyun;
 
-public class Product {
+abstract public class Product {
 
 	private String id;
 	
 	private Spec spec;
 	
-	private Feature feature;
+	private OS os;
 	
+	// getter, setter
 	
-
 	public String getId() {
 		return id;
 	}
@@ -25,13 +25,15 @@ public class Product {
 	public void setSpec(Spec spec) {
 		this.spec = spec;
 	}
-
-	public Feature getFeature() {
-		return feature;
+	
+	public OS getOs() {
+		return os;
 	}
 
-	public void setFeature(Feature feature) {
-		this.feature = feature;
+	public void setOs(OS os) {
+		this.os = os;
 	}
+
+
 	
 }
