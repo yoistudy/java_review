@@ -1,33 +1,18 @@
 package OOPExercise.Jaeyun;
 
-public class IPhone extends Product {
+public abstract class IPhone extends Product {
 	
 	private IOS os;
+	
+	public abstract void login (String userId);
 
-	IPhone(String id) {
-		this.setId(id);
-		this.setOs(new IOS());
-	}
+	public abstract void setCelluarInfo(CelluarInfo celluarInfo);
 	
-	public void login (String userId) {
-		this.os.login(userId);
-	}
-
-	public void setCelluarInfo(CelluarInfo celluarInfo) {
-		this.os.setCelluarInfo(celluarInfo);
-	}
+	public abstract void makeCall(String phoneNumber);
 	
-	public void makeCall(String phoneNumber) {
-		this.os.makeCall(phoneNumber);
-	}
+	public abstract void sendText(String phoneNumber, String message);
 	
-	public void sendText(String phoneNumber, String message) {
-		this.os.sendText(phoneNumber, message);
-	}
-	
-	public void makeFacetimeCall(String userId) {
-		this.os.makeFaceTimeCall(userId);
-	}
+	public abstract void makeFacetimeCall(String userId);
 	
 	// getter, setter
 

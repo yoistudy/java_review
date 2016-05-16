@@ -1,21 +1,12 @@
 package OOPExercise.Jaeyun;
 
-public class Mac extends Product {
+public abstract class Mac extends Product {
 
 	private MacOS os;
-
-	Mac(String id) {
-		this.setId(id);
-		this.setOs(new MacOS());
-	}
 	
-	public void login (String userId) {
-		this.os.login(userId);
-	}
+	public abstract void login (String userId);
 	
-	public void makeFacetimeCall(String userId) {
-		this.os.makeFaceTimeCall(userId);
-	}
+	public abstract void makeFacetimeCall(String userId);
 	
 	// getter, setter
 
