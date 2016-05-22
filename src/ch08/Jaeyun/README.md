@@ -91,7 +91,7 @@ try {
 
 - 아규먼트로 캐치할 예외 타입을 지정하며, `Throwable` 클래스로부터 상속받은 타입이여야 함
 
-- 코드의 중복을 줄이기 위해 `|`로 구분하여 예외타입 아규먼트를 하나 이상 사용할 수 있음 (Java SE 7에서 추가)
+- 코드의 중복을 줄이기 위해 `|`로 구분하여 멀티캐치(예외타입 아규먼트를 하나 이상 사용)할 수 있음 (Java SE 7에서 추가)
 
   이때 생성되는 예외인스턴스변수는 묵시적으로 final이 됨
 
@@ -120,9 +120,9 @@ try {
 
 - 클린업 코드(자원해제에 관한 코드)를 실행하지 않고 건너뛰는 상황을 피할 수 있게 해줌
 
-  finally 블럭에 클린업 코드를 넣는 것은 자원 누수를 막는 언제나 좋은 관행
+  finally 블럭에 클린업 코드를 넣는 것은 자원 누수를 막을 수 있다
 
-참고 : JVM이 try나 catch 블럭에을 실행하고 있을 때 종료되면 finally 블럭은 실행되지 않음
+참고 - JVM이 try나 catch 블럭에을 실행하고 있을 때 종료되면 finally 블럭은 실행되지 않음
 
 ```java
 finally {
@@ -132,29 +132,160 @@ finally {
 
 }
 ```
-## 예외처리구문 try-catch
 
-## try-catch문에서의 흐름
+#### try-with-resources 문
+
+- 하나 이상의 (사용 후 반드시 해제가 필요한)자원을 선언한 try 문
+
+-  __java.lang.AutoCloseable__ 과 그것을 확장한 인터페이스를 구현한 타입의 객체라면 try-with-resources 블럭에서 자원으로 사용가능함
+
+- try 블럭을 나오면 자원을 해제함
+
+- try 블럭에서 예외가 throw되면 try-with-resources 문에서 자원을 생성한 역순으로 자원이 해제됨
+
+```java
+try (BufferedReader br =
+      new BufferedReader(new FileReader(fileName)); // 하나 이상의 자원을 사용 할 경우 세미콜론을 이용해 구분
+    java.util.zip.ZipFile zf =
+  		new java.util.zip.ZipFile(zipFileName)
+	) {
+
+  // 에외를 throw할 수도 있는 코드
+}
+```
+## throw된 예외 명시하기
+
+예외가 발생했을 때 발생한 코드에서 예외를 캐치하여 핸들링하는게 적합한 경우가 있고
+
+호출(콜 스택)을 거슬러 내려가 그 코드를 사용하는 곳으로 예외를 전달하여 핸들링하는게 더 좋을 때도 있다
+
+예를 들어 예외를 throw할 수 있는 어떤 기능을 하는 코드를 작성하고 그 코드에서 예외 핸들링하는 경우 그 기능을 사용하는 곳에서 예외를 제어할 수 없다. 그 기능을 사용하는 곳의 모든 요구를 예상할 수 없기 때문에 예외을 전달하여 예외 핸들링의 제어도 넘겨주는 것
+
+```java
+public void writeList() throws IndexOutOfBoundsException {
+  PrintWriter out = new PrintWriter(new FileWriter("OutFile.txt"));
+    for (int i = 0; i < SIZE; i++) {
+      out.println("Value at: " + i + " = " + list.get(i));
+  }
+  out.close();
+}
+```
+
+위의 코드에서 직접 예외를 핸들링하지 않으려면 코드가 throw할 수 있는 예외를 `throws`로 메소드에 명시하면 된다
 
 ## 예외 발생시키기
 
-## 예외 클래스의 계층구조
+- 어느 코드(본인이 직접 작성한 코드, JRE 처럼 누군가 작성한 패키지에 포함된 코드)에서나 예외를 throw할 수 있다
 
-## 예외의 발생과 catch블럭
+- 모든 예외는 `throw`문으로 throw한다
 
-## finally 블럭
+작성하는 코드에서 일어날 수 있는 문제를 표현하기위해 사용자가 직접 예외를 작성할 수 있다
 
-## 메서드의 예외 선언하기
+#### throw 문
 
-## 예외 되던지기 (exception re-throwing)
+- throw문에는 하나의 인자가 필요하며 __java.lang.Throwable__ 의 서브클래스 인스턴스여야 한다
 
-## 사용자 정의 예외 만들기
+```java
+public Object pop() {
+  Object obj;
 
-## 캐치와 명시하기 우회
+  if (size == 0) {
+      throw new EmptyStackException();
+  }
 
-checked exception에 강제되는 "캐치 혹은 명시하기의 요건"이 예외처리 매커니즘에서 심각한 결함이라고 생각하고 checked excption에 unchecked excption을 사용하여 우회하할 수 도 있다 ..
+  obj = objectAt(size - 1);
+  setObjectAt(size - 1, null);
+  size--;
+  return obj;
+}
+```
 
-참고 리소스
+## 사용자 정의 예외
+
+#### 코드에서 발생한 문제로 throw할 예외를 고를때 직접 예외를 작성해야하는 경우
+- Java가 제공하는 예외 타입이 표현하지 않는 예외가 필요할 때
+- 벤더가 제공하는 예외와 구별되는게 사용자에게 도움이 될 때
+- 연관된 하나 이상의 예외를 throw하는 코드일 때
+- 코드에서 사용하려는 예외를 사용자가 사용할 수 없을때 (예를 들어 패키지가 독립적으로 제공되어야 하는데 코드가 타 패키지의 예외를 사용하려고 할 때)
+
+#### 예외 작성
+
+```java
+class UserDefinedException extend Exception {
+
+  UserDefinedException(String message) {
+    super(message);
+  }
+}
+```
+예외 타입 UserDefinedException 작성
+
+## 연쇄 예외 (chanined exceptions)
+
+- 하나의 예외가 또 다른 예외를 throw시킬 수 있다
+
+- 해당 예외가 어떤 예외를 유발하는지 알 수 있도록 chained excpetions을 사용
+
+
+#### chained excpetions을 지원하는 __java.lang.Throwable__ 의 생성자와 메서드
+- Throwable(String, Throwable) : 첫번째 인자에는 메세지, 두번째 인자에는 현재 생성되는 예외의 원인(cause) 예외 인스턴스
+- Throwable(Throwable)
+- Throwable getCause()
+- Throwable initCause(Throwable) : 인자에는 원인 예외 인스턴스
+
+#### 연쇄 예외 사용
+
+```java
+try {
+  // IOException을 throw할 수 있는 코드
+} catch (IOException e) {
+    throw new SampleException("Other IOException", e);
+}
+```
+IOException이 throw되면 핸들러에서 SampleException이 throw된다
+SampleException throw의 원인은 IOException이 되며 throw시 생성자에 메시지와 함께 원인 예외 인스턴스를 전달한다
+
+
+## 캐치와 명시하기와 unchecked exception
+
+#### 캐치와 명시하기 우회
+자바에서 unchecked exception은 "캐치 혹은 명시하기의 요건"이 적용되지 않기때문에
+
+- unchecked exception만 throw하는 코드를 작성
+- 모든 예외를 RuntimeException의 서브클래스로 생성
+
+프로그래머에게 편리하게 보일지라도 "캐치 혹은 명시하기의 요건"의 목적을 회피하는 것이며 프로그래머가 __작성한 클래스를 사용하는 다른 사용자에게 문제를 발생시킬 수 있다__
+
+#### 메소드 작성자가 메소드 스코프안에서 발생할 수 있는 모든 checked exception을 명시해야하는 이유
+- 메소드에서 throw될 수 있는 예외의 명시하는 부분은 메소드의 공개된 프로그래밍 인터페이스이다 (사용하는 곳에서 확인할 수 있다)
+
+- 메소드를 호출하는 사용자들은 반드시 그 메소드가 throw할 수도 있는 예외를 알아야 한다
+
+  그래야 어떻게 핸들링할 수 있을지 결정할 수 있기 때문이다
+
+#### 메소드에 예외를 명시하는 것이 좋지만 RuntimeException은 명시 하지 않는 이유
+- RuntimeException은 프로그래밍 자체가 야기한 문제들을 표현
+
+  코드에서 그런 문제(산술, 포인터, 인덱싱 예외 등)를 복구하고 처리하는걸 예상할 수 없음
+
+- RuntimeException은 프로그램 어디서나 발생할 수 있고 특정 어느 곳에서는 많이 발생할 수 도 있음
+
+  RuntimeException을 메소드에 모두 명시하는 것은 프로그램의 명료함을 떨어뜨릴수 있음
+
+
+#### RuntimeException을 throw하는 사례
+메소드에 아규먼트가 잘못 전달되어 null이라면 메소드는 unchecked exception인 NullPointerException을 throw할 수 도 있다
+
+#### checked exception과 unchecked exception을 만드는 사례
+메소드가 발생할 수 있는 예외를 명시하기가 귀찮다고해서 그냥 RuntimeException을 throw하거나  RuntimeException의 서브클래스의 예외를 만들면 안됨
+
+- 코드에서 예외 처리를 할 수 있도록 예상할 수 있다면 checked exception을 만든다
+
+- 코드에서 예외 복구에 대해 아무것도 할 수 없다면 unchecked exception을 만든다
+
+
+
 ---
+###### 관련 리소스
 - [The Java™ Tutorials](https://docs.oracle.com/javase/tutorial/essential/exceptions/index.html)
 - [정상혁님 블로그](http://egloos.zum.com/benelog/v/1901121)
