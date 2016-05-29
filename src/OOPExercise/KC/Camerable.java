@@ -5,11 +5,11 @@ package OOPExercise.KC;
  */
 public interface Camerable {
 
-    void takePicture();
+    void takePicture(String img);
 
-    void savePicture();
+    void savePicture(String img);
 
-    void removePicture();
+    void removePicture(String img);
 
     void printPictureList();
 }
