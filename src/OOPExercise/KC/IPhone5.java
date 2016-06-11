@@ -13,7 +13,6 @@ public class IPhone5 extends AppleDevice implements Callable{
     public IPhone5(MobileDevice mobileDevice) {
         this.mobileDevice = mobileDevice;
         StringBuilder sb1 = new StringBuilder();
-        StringBuffer
         //mobileDevice = new MobileDevice();
         //mobileDevice.setDeviceNumber(phoneNumber);
         //mobileDevice.setNetworkProvider(networkProvider);

@@ -21,7 +21,7 @@ public class ListOfNumbers3 {
 		// FileWriter 생성자는 IOException throw하며 반드시 캐치 해야한다
 		PrintWriter out = null;
 		try {
-			out = new PrintWriter(new FileWriter("OutFile.txt"));
+			//out = new PrintWriter(new FileWriter("OutFile.txt"));
 
 			for (int i = 0; i < SIZE; i++) {
 				// get() 메소드는 IndexOutOfBoundsException throw하며 반드시 캐치 해야한다
@@ -31,7 +31,7 @@ public class ListOfNumbers3 {
 			
 			//throw new IndexOutOfBoundsException("IndexOutOfBoundsException 예외 던지기");
 			//throw new IOException("IOException 예외 던지기");
-		} catch (IndexOutOfBoundsException|IOException e) {
+		} catch (IndexOutOfBoundsException e) {
 			System.err.println(e.getClass() + ", Exception: " + e.getMessage());
 		}
 	}
