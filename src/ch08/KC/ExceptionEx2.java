@@ -14,8 +14,6 @@ public class ExceptionEx2 {
 
         List<String> strList = new ArrayList<String>();
 
-        strList.stream()
-                .forEach();
 
         for (int i = 0; i < 10; i++) {
             result = number / (int)(Math.random() * 10);
