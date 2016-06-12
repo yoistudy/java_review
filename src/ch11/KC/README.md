@@ -82,33 +82,33 @@ Double Circular Linked List(순회)
   기존 코드의 호환성때문에 유지 되고 있는 인터페이스
 - Enumeration의 신버젼
 - 컬렉션 프레임웍에서 저장된 요소를 읽어오는 표준화된 방법
-<pre>
-<code>
+
+
+```java
 Iterator iter = list.iterator();
 while(iter.hasNext()){
     // 작업 수행
 }
-</code>
-</pre>
+```
 
 
 ##### ListIterator
 - Iterator : 단방향 접근
 - ListIterator : 양방향으로 접근이 가능
-<pre>
-<code>
+
+```java
 Iterator iter = list.listIterator();
 while(iter.hasPrevious()){
     System.out.println(iter.previous());
 }
-</code>
-</pre>
+```
+
 
 #### HashSet
 - Set인터페이스를 구현한 대표적인 클래스
 - 중복(X) / 저장순서를 유지하지 않기 때문에 유지하고자 한다면 *LinkedHashSet*를 사용
-<pre>
-<code>
+
+```java
 // Custom Class의 경우 Set 인터페이스 구현 클래스를 정확하게 사용하기 위해서
 // equals, hashCode 메서드를 오버라이딩 해서 사용해야 함.
 Person person = new Person("David",10);
@@ -116,5 +116,6 @@ Person person = new Person("David",10);
 // String 클래스의 경우, 오버라이딩이 적절하게 이뤄져 있는 클래스이기 때문에
 // 별도로 equals, hashCode 메서드를 오버라이딩 하지 않아도 됨.
 String name   = new String("10");
-</code>
-</pre>
+```
+
+
