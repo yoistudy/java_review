@@ -10,8 +10,7 @@ public class MessageFormatEx {
 		Object[] arguments = {
 				"yoiyoy",
 				"010-1234-5678",
-				"29",
-				"2016-06-19"
+				"29"
 		};
 		MessageFormat mf = new MessageFormat(pattern);
 		// MessageFormat 클래스의 스태틱 메서드 format을 사용한다

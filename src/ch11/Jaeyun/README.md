@@ -6,7 +6,7 @@ java.util 패키지의 유용한 클래스들을 알아본다
 
 #### Calendar와 Date
 
-- 날짜와 시간에 관견ㄹ된 데이터를 쉽게 처리할 수 있음
+- 날짜와 시간에 관련된 데이터를 쉽게 처리할 수 있음
 
 - JDK1.0부터 Date가 사용되었고 JDK1.1부터 보다 향상된 기능의 Calendar가 추가 됨
 
@@ -426,6 +426,81 @@ public static <T extends Product> void printAll(ArrayList<T> productList1, Array
 }
 
 ```
+
+###### Iterator<E>
+
+```java
+// 제네릭 없이 사용할 경우
+Iterator it = list.iterator();
+while (it.next()) {
+    Product product = (Product)it.next(); // 명시적 형변환 필요
+    System.out.println("상품:" + product.getName());
+}
+
+// 제네릭 사용할 경우
+Iterator it<Product> = list.iterator();
+while (it.next()) {
+    Product product = it.next(); // Product 타입으로 반환값 보장
+    System.out.println("상품:" + product.getName());
+}
+
+```
+
+###### Comparable<T>
+
+Comparable 인터페이스는 정렬기준을 구현할 때 사용한다
+```java
+ // 구현 클래스를 작성하여 사용하는 방법
+class Product implements Comparable<Product> {
+    ...
+
+    @Override
+    public int compareTo(Product o) {
+		return o.getPrice() - this.getPrice();
+    }
+}
+Collections.sort(productList)  // 가격순으로 상품리스트를 정렬
+
+// 익명 구현 객체를 작성하여 사용하는 방법
+Collections.sort(productList, new Comparator<Product>() {
+	@Override
+	public int compare(Product o1, Product o2) {
+		return o2.getPrice() - o1.getPrice();
+	}
+});
+
+```
+###### HashMap<K,V>
+
+HashMap 객체의 키(K)와 값(V) 타입의 제네릭 사용
+
+```java
+// 제네릭 없이 사용할 경우
+HashMap productPriceMap = new HashMap<>();
+productPriceMap.put("TV", 2000);
+productPriceMap.put("AUDIO", 1000);
+Integer tvPrice = (Integer)productPriceMap.get("TV"); // 명시적 형변환 필요
+
+// 제네릭 사용할 경우
+HashMap<String, Integer> productPriceMap = new HashMap<>();
+productPriceMap.put("TV", 2000);
+productPriceMap.put("AUDIO", 1000);
+Integer tvPrice = productPriceMap.get("TV"); // Integer 타입으로 반환값 보장
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
