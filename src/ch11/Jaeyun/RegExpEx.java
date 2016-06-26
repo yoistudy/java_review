@@ -18,7 +18,7 @@ public class RegExpEx {
 		Matcher m = p.matcher(source);
 		int i=0 ;
 		while(m.find()) {
-			System.out.println( ++i + " : " + m. group() + " -> " +
+			System.out.println( ++i + " : " + m.group() + " -> " +
 					m.group(1) + ", " + m.group(2) + ", " +  m.group(3));
 		}
 	}
