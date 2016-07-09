@@ -68,7 +68,7 @@ class ExtArrayList<T extends E, E> extends ArrayList<E> {
 public class GenericsEx {
 
 	public static void main(String[] args) {
-		ExtArrayList<? extends Product, Product> productList = new ExtArrayList<>();
+		ExtArrayList<? extends Product, Product> productList = new ExtArrayList();
 		productList.add(new Tv());
 		productList.add(new Audio(4));
 		productList.add(new Tv(2));
@@ -98,9 +98,7 @@ public class GenericsEx {
 	}
 	
 	public static int getTotalProductPrice (ArrayList<Product> productList) {
-		return productList.stream()
-				.map(product -> product.getPrice() * product.getQuantity())
-				.reduce(0, (totalPrice, curPrice) -> totalPrice + curPrice);
+		return 0;
 	}
 	
 	public static <T extends Product> void printTotalProductPrice(ArrayList<T> productList) {
