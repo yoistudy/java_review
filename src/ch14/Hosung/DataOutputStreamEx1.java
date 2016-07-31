@@ -15,6 +15,8 @@ public class DataOutputStreamEx1 {
 			dos.writeInt(10);
 			dos.writeFloat(20.0f);
 			dos.writeBoolean(true);
+			
+			dos.close();
 		} catch (IOException e) {
 			e.printStackTrace();// TODO: handle exception
 		}
