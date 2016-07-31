@@ -11,6 +11,7 @@
 
 ## 구현/실행
 - Thread 클래스 확장(상속)
+
     ```java
     class ThreadSample extends Thread{
         public void run(){
@@ -19,6 +20,7 @@
     }
     ```
 - Runnable 인터페이스 구현
+
     ```java
     class ThreadSample implements Runnable{
         public void run(){
@@ -26,6 +28,7 @@
         }
     }
     ```
+
     > 결국, 인터페이스(Runnable)을 활용하는 방법이나 Thread 클래스를 확장하는 방법이나 run() 매소드의 내용을 채우면 되는 것
 - 쓰레드의 이름을 지정하지 않으면 [Thread-번호] 형식으로 이름이 정해진다.
 - **한번 사용한 쓰레드는 재사용이 불가능하다. 그렇기 때문에 하나의 스레드에 대해서는 한 번만 호출이 가능하다**
