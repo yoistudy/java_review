@@ -65,7 +65,7 @@ ch.14 입출력(I/O)
 
 - 입력과 출력스트림을 하나의 스트림으로 연결해서 데이터를 주고받음
 
-#### StringReaderdhk StringWriter
+#### StringReader와 StringWriter
 
 - CharArrayReader와 CharArrayWriter와 같이 입출력 대상이 메모리인 스트림
 
